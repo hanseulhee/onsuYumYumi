@@ -17,7 +17,8 @@ const globalStyle = css`
   }
 
   button,
-  a {
+  a,
+  h1 {
     all: unset;
     cursor: pointer;
   }
