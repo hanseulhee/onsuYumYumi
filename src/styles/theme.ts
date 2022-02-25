@@ -10,6 +10,10 @@ const theme: Theme = {
     normal: 400,
     bold: 700,
   },
+  mediaQuery: {
+    tablet: "@media (max-width: 830px)",
+    mobile: "@media (max-width: 425px)",
+  },
 };
 
 export default theme;
