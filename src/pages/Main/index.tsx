@@ -5,16 +5,24 @@ import { motion } from "framer-motion";
 import Nav from "components/Nav";
 import theme from "styles/theme";
 import Background from "./Background";
+import MainCard from "components/MainCard";
+import Line from "./Line";
 
 function Main() {
   return (
     <>
       <Nav />
-      <div css={mainTitleBox}>
-        <h1 css={mainTitle}>
+      <div css={TitleBox}>
+        <h1 css={Title}>
           성공회대 온수역 맛집, <b>온수냠냐미</b>에서
         </h1>
         <Background />
+      </div>
+      <div css={layoutStyle}>
+        <span css={menuCategory}>고기</span>
+
+        <Line />
+        <MainCard />
       </div>
     </>
   );
@@ -22,7 +30,7 @@ function Main() {
 
 export default Main;
 
-const mainTitleBox = css`
+const TitleBox = css`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,7 +38,7 @@ const mainTitleBox = css`
 
   margin-top: 50px;
   width: 100%;
-  height: 80vh;
+  height: 84vh;
 
   ${theme.mediaQuery.mobile} {
     padding: 0px 23px;
@@ -38,12 +46,21 @@ const mainTitleBox = css`
   }
 `;
 
-const mainTitle = (theme: Theme) => css`
+const Title = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.normal};
-  font-size: 43px;
+  font-size: 2.68rem;
   margin-bottom: 23px;
 
   ${theme.mediaQuery.mobile} {
-    font-size: 25px;
+    font-size: 1.56rem;
   }
+`;
+
+const menuCategory = (theme: Theme) => css`
+  font-weight: ${theme.fontWeight.bold};
+  font-size: 1.56rem;
+`;
+
+const layoutStyle = css`
+  padding: 30px 23px;
 `;

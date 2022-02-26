@@ -22,15 +22,17 @@ const navStyle = css`
 
   padding: 6px 23px;
   border-bottom: 1px solid #f2f2f2;
+  background-color: white;
   box-shadow: 0 0px 3px 4px rgba(0, 0, 0, 0.02);
+  z-index: 10;
 `;
 
 const logoStyle = (theme: Theme) => css`
-  font-size: 25px;
+  font-size: 1.56rem;
   font-weight: ${theme.fontWeight.bold};
   color: ${theme.color.yellow};
 
   ${theme.mediaQuery.mobile} {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 `;
