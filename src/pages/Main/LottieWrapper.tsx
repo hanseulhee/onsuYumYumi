@@ -11,7 +11,7 @@ function LottieWrapper({ lottieData }: ILottieWrapper) {
     autoplay: true,
   };
 
-  return <Lottie options={lottieOptions} />;
+  return <Lottie options={lottieOptions} isClickToPauseDisabled />;
 }
 
 export default LottieWrapper;

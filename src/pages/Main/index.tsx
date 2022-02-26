@@ -40,7 +40,7 @@ const mainTitleBox = css`
 
 const mainTitle = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.normal};
-  font-size: 40px;
+  font-size: 43px;
   margin-bottom: 23px;
 
   ${theme.mediaQuery.mobile} {

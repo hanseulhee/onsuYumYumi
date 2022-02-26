@@ -15,7 +15,7 @@ function Nav() {
 
 export default Nav;
 
-const navStyle = (theme: Theme) => css`
+const navStyle = css`
   position: sticky;
   top: 0;
   width: 100%;
@@ -26,7 +26,11 @@ const navStyle = (theme: Theme) => css`
 `;
 
 const logoStyle = (theme: Theme) => css`
-  font-size: 24px;
+  font-size: 25px;
   font-weight: ${theme.fontWeight.bold};
   color: ${theme.color.yellow};
+
+  ${theme.mediaQuery.mobile} {
+    font-size: 20px;
+  }
 `;

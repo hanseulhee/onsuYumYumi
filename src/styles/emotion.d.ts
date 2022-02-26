@@ -11,5 +11,9 @@ declare module "@emotion/react" {
       normal: number;
       bold: number;
     };
+    mediaQuery: {
+      tablet: string;
+      mobile: string;
+    };
   }
 }
