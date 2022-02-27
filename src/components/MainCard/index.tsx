@@ -3,13 +3,18 @@
 import { css, Theme } from "@emotion/react";
 import { Link } from "react-router-dom";
 
-function MainCard() {
+interface Props {
+  name: string;
+  summary: string;
+}
+
+function MainCard({ name, summary }: Props) {
   return (
     <div css={CardTool}>
       <img src="assets/images/dondon.png" alt="restaurant" />
       <div css={CardContentTool}>
-        <span css={CardTitle}>돈내고 돈먹기</span>
-        <span css={CardSummary}>착한 가격의 생삼겹살집</span>
+        <span css={CardTitle}>{name}</span>
+        <span css={CardSummary}>{summary}</span>
       </div>
     </div>
   );
@@ -17,7 +22,7 @@ function MainCard() {
 
 export default MainCard;
 
-const CardTool = css`
+const CardTool = (theme: Theme) => css`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,10 +30,15 @@ const CardTool = css`
   width: 330px;
   height: 360px;
   border-radius: 7px;
-  background-color: #ffffffe4;
+  background-color: #faf9f9;
   :hover {
     box-shadow: 0px 0px 0px 1px rgb(0 0 0 / 5%);
     cursor: pointer;
+  }
+
+  ${theme.mediaQuery.mobile} {
+    width: 150px;
+    height: 170px;
   }
 `;
 
