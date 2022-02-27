@@ -1,13 +1,13 @@
 /** @jsxImportSource @emotion/react */
 
 import { css, Theme } from "@emotion/react";
-import LottieLine from "pages/Main/LottieLine";
 import lineLottieData from "assets/lottie/line.json";
+import LottieWrapper from "pages/Main/LottieWrapper";
 
 function Line() {
   return (
     <div css={lottieLineStyle}>
-      <LottieLine lottieData={lineLottieData} />
+      <LottieWrapper lottieData={lineLottieData} />
     </div>
   );
 }
