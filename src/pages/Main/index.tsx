@@ -8,7 +8,11 @@ import Background from "./Background";
 import MainCard from "components/MainCard";
 import Line from "./Line";
 
+import storeData from "assets/stores";
+
 function Main() {
+  console.log(storeData);
+
   return (
     <>
       <Nav />
@@ -19,10 +23,16 @@ function Main() {
         <Background />
       </div>
       <div css={layoutStyle}>
-        <span css={menuCategory}>고기</span>
+        <span css={menuCategory}>가성비좋은곳</span>
 
         <Line />
-        <MainCard />
+        {storeData.가성비좋은곳.map((store) => (
+          <MainCard
+            key={store.name}
+            name={store.name}
+            summary={store.summary}
+          />
+        ))}
       </div>
     </>
   );
