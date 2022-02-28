@@ -2,7 +2,7 @@
 
 import { css, Theme } from "@emotion/react";
 import lineLottieData from "assets/lottie/line.json";
-import LottieWrapper from "pages/Main/LottieWrapper";
+import LottieWrapper from "components/common/LottieWrapper";
 
 function Line() {
   return (

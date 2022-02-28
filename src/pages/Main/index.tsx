@@ -4,9 +4,9 @@ import { css, Theme } from "@emotion/react";
 import { motion } from "framer-motion";
 import Nav from "components/Nav";
 import theme from "styles/theme";
-import Background from "./Background";
+import Background from "pages/Main/Background";
 import MainCard from "components/MainCard";
-import Line from "./Line";
+import Line from "components/common/Line";
 
 import storeData from "assets/stores";
 
