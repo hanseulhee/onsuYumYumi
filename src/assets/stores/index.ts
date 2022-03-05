@@ -226,7 +226,7 @@ const stores: IStore[] = [
     name: "본가칡냉면",
     summary: "여름의 더위는 여기서 달래자!",
     category: ["혼밥하기좋은곳", "가성비좋은곳"],
-    img: "https://skhu-likelion-9th.github.io/LikeFoodLion/css/nang.jpg",
+    img: "https://user-images.githubusercontent.com/63100352/156384979-675a9259-9eb9-4e7e-8b6c-aec9208267aa.jpg",
     phone: "02-2615-1331",
   },
   {
