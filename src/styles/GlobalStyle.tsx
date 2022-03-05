@@ -17,6 +17,15 @@ const globalStyle = css`
     word-break: keep-all;
   }
 
+  html,
+  body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+  }
+
   button,
   a,
   h1 {
