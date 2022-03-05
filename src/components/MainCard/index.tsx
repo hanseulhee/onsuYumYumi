@@ -1,8 +1,10 @@
 /** @jsxImportSource @emotion/react */
 
 import { css, Theme } from "@emotion/react";
-import { Link } from "react-router-dom";
 
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 interface Props {
   name: string;
   summary: string;
@@ -10,14 +12,17 @@ interface Props {
 }
 
 function MainCard({ name, summary, img }: Props) {
+  useEffect(() => {
+    AOS.init();
+  });
   return (
-    <div css={CardTool}>
-      <div css={CardContent}>
-        <span css={CardTitle}>{name}</span>
-        <span css={CardSummary}>{summary}</span>
-        <img src={img} alt="restaurant" css={CardImg} />
+      <div css={CardTool}>
+        <div css={CardContent}>
+          <span css={CardTitle}>{name}</span>
+          <span css={CardSummary}>{summary}</span>
+          <img src={img} alt="restaurant" css={CardImg} />
+        </div>
       </div>
-    </div>
   );
 }
 
@@ -26,17 +31,14 @@ export default MainCard;
 const CardTool = (theme: Theme) => css`
   position: relative;
   height: 350px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  border-radius: 9px;
   box-shadow: 0px 1px 1px 1px rgb(0 0 0 / 6%);
   border: 1px solid #f1f1f1;
   border-radius: 3px;
-
   cursor: pointer;
 `;
 
