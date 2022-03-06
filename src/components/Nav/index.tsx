@@ -30,7 +30,7 @@ function Nav() {
 
 export default Nav;
 
-const navStyle = css`
+const navStyle = (theme: Theme) => css`
   position: sticky;
   display: flex;
   top: 0;
@@ -39,7 +39,7 @@ const navStyle = css`
   align-items: center;
   padding: 6px 23px;
   border-bottom: 1px solid #f2f2f2;
-  background-color: white;
+  background-color: ${theme.color.white};
   box-shadow: 0 0px 3px 4px rgba(0, 0, 0, 0.02);
   z-index: 10;
 `;

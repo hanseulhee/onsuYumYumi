@@ -4,6 +4,8 @@ const theme: Theme = {
   color: {
     yellow: "#fbc531",
     grey: "#f2f2f2",
+    white: "#FFFFFF",
+    black: "#000000",
   },
   fontWeight: {
     light: 100,

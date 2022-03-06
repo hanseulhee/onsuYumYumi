@@ -2,8 +2,6 @@
 
 import { css, Theme } from "@emotion/react";
 
-import { useEffect } from "react";
-import AOS from "aos";
 import "aos/dist/aos.css";
 interface Props {
   name: string;
@@ -12,17 +10,14 @@ interface Props {
 }
 
 function MainCard({ name, summary, img }: Props) {
-  useEffect(() => {
-    AOS.init();
-  });
   return (
-      <div css={CardTool}>
-        <div css={CardContent}>
-          <span css={CardTitle}>{name}</span>
-          <span css={CardSummary}>{summary}</span>
-          <img src={img} alt="restaurant" css={CardImg} />
-        </div>
+    <div css={CardTool}>
+      <div css={CardContent}>
+        <span css={CardTitle}>{name}</span>
+        <span css={CardSummary}>{summary}</span>
+        <img src={img} alt="restaurant" css={CardImg} />
       </div>
+    </div>
   );
 }
 

@@ -122,7 +122,7 @@ const title = (theme: Theme) => css`
 `;
 const smallTitle = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.normal};
-  font-size: 14px;
+  font-size: 0.875rem;
   height: 30px;
   border-bottom: 1px solid #d2d2d2;
 `;

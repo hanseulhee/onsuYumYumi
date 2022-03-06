@@ -1,21 +1,15 @@
 /** @jsxImportSource @emotion/react */
-import { useEffect } from "react";
 
 import { css, Theme } from "@emotion/react";
+import "aos/dist/aos.css";
 import Nav from "components/Nav";
 import theme from "styles/theme";
 import Background from "pages/Main/Background";
 import MainCard from "components/MainCard";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import storeData from "assets/stores";
 import Footer from "components/Footer";
 
 function Main() {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  });
   return (
     <>
       <Nav />
