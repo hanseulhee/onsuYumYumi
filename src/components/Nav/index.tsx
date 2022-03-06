@@ -11,16 +11,16 @@ function Nav() {
       </Link>
 
       <div>
-        <a href="#1" css={button}>
+        <a href="#혼밥" css={button}>
           혼밥
         </a>
-        <a href="#2" css={button}>
+        <a href="#회식" css={button}>
           회식
         </a>
-        <a href="#3" css={button}>
+        <a href="#가성비" css={button}>
           가성비
         </a>
-        <a href="#4" css={button}>
+        <a href="#해장" css={button}>
           해장
         </a>
       </div>

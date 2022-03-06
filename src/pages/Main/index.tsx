@@ -22,7 +22,7 @@ function Main() {
 
       <div css={layoutTool}>
         <div css={layoutStyle}>
-          <span css={menuCategory} id="1">
+          <span css={menuCategory} id="혼밥">
             혼밥하기좋은곳
           </span>
 
@@ -37,7 +37,7 @@ function Main() {
             ))}
           </div>
 
-          <span css={menuCategory} id="2">
+          <span css={menuCategory} id="회식">
             회식하기좋은곳
           </span>
 
@@ -51,7 +51,7 @@ function Main() {
               />
             ))}
           </div>
-          <span css={menuCategory} id="3">
+          <span css={menuCategory} id="가성비">
             가성비좋은곳
           </span>
 
@@ -65,7 +65,7 @@ function Main() {
               />
             ))}
           </div>
-          <span css={menuCategory} id="4">
+          <span css={menuCategory} id="해장">
             해장하기좋은곳
           </span>
 

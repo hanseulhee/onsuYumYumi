@@ -1,8 +1,9 @@
 /** @jsxImportSource @emotion/react */
 
 import { css, Theme } from "@emotion/react";
-
+import { Link } from "react-router-dom";
 import "aos/dist/aos.css";
+
 interface Props {
   name: string;
   summary: string;
@@ -11,6 +12,7 @@ interface Props {
 
 function MainCard({ name, summary, img }: Props) {
   return (
+    <Link to={`/detail/${name}`}>
     <div css={CardTool}>
       <div css={CardContent}>
         <span css={CardTitle}>{name}</span>
@@ -18,6 +20,7 @@ function MainCard({ name, summary, img }: Props) {
         <img src={img} alt="restaurant" css={CardImg} />
       </div>
     </div>
+    </Link>
   );
 }
 
@@ -30,7 +33,7 @@ const CardTool = (theme: Theme) => css`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  background-color: #fafafa;
   box-shadow: 0px 1px 1px 1px rgb(0 0 0 / 6%);
   border: 1px solid #f1f1f1;
   border-radius: 3px;
@@ -43,7 +46,6 @@ const CardContent = css`
   flex-direction: column;
   padding: 10px 10px;
   height: 350px;
-  background-color: #fafafa;
 `;
 
 const CardImg = css`
