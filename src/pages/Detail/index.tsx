@@ -14,12 +14,12 @@ function Detail() {
   // }, []);
   return (
     <>
-      <div css={Tool}>
+      <div css={totalTool}>
         <div css={ImgTool}>
           <img src={img} css={Img} alt="restaurant" />
         </div>
 
-        <div css={SummaryTool}>
+        <div css={Tool}>
           <nav css={nav}>
             <ul>
               <li css={li}>Restaurant</li>
@@ -52,6 +52,9 @@ function Detail() {
 
                 <div css={menuTool}>
                   <h2>Menu</h2>
+                  <div css={informTool}>
+                    <li css={inform}>메뉴</li>
+                  </div>
                 </div>
               </div>
             </div>
@@ -64,7 +67,7 @@ function Detail() {
 
 export default Detail;
 
-const Tool = css`
+const totalTool = css`
   top: 0;
   width: 100%;
   height: 100%;
@@ -83,7 +86,7 @@ const Img = css`
   width: 100%;
 `;
 
-const SummaryTool = css`
+const Tool = css`
   float: right;
   width: 50%;
   padding: 0 0 0 66px;
@@ -140,5 +143,4 @@ const inform = (theme: Theme) => css``;
 
 const menuTool = css`
   margin-top: 30px;
-  border-bottom: 1px solid #d2d2d2;
 `;
