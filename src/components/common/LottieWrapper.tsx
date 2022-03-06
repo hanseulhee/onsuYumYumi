@@ -7,7 +7,7 @@ interface ILottieWrapper {
 function LottieWrapper({ lottieData }: ILottieWrapper) {
   const lottieOptions: Options = {
     animationData: lottieData,
-    loop: false,
+    loop: true,
     autoplay: true,
   };
 

@@ -1,18 +1,15 @@
 /** @jsxImportSource @emotion/react */
 
 import { css, Theme } from "@emotion/react";
-import { motion } from "framer-motion";
+import "aos/dist/aos.css";
 import Nav from "components/Nav";
 import theme from "styles/theme";
 import Background from "pages/Main/Background";
 import MainCard from "components/MainCard";
-import Line from "components/common/Line";
-
 import storeData from "assets/stores";
+import Footer from "components/Footer";
 
 function Main() {
-  console.log(storeData);
-
   return (
     <>
       <Nav />
@@ -22,18 +19,69 @@ function Main() {
         </h1>
         <Background />
       </div>
-      <div css={layoutStyle}>
-        <span css={menuCategory}>가성비좋은곳</span>
 
-        <Line />
-        {storeData.가성비좋은곳.map((store) => (
-          <MainCard
-            key={store.name}
-            name={store.name}
-            summary={store.summary}
-          />
-        ))}
+      <div css={layoutTool}>
+        <div css={layoutStyle}>
+          <span css={menuCategory} id="1">
+            혼밥하기좋은곳
+          </span>
+
+          <div css={cardStyle}>
+            {storeData.혼밥하기좋은곳.map((store) => (
+              <MainCard
+                key={store.name}
+                name={store.name}
+                summary={store.summary}
+                img={store.img}
+              />
+            ))}
+          </div>
+
+          <span css={menuCategory} id="2">
+            회식하기좋은곳
+          </span>
+
+          <div css={cardStyle}>
+            {storeData.회식하기좋은곳.map((store) => (
+              <MainCard
+                key={store.name}
+                name={store.name}
+                summary={store.summary}
+                img={store.img}
+              />
+            ))}
+          </div>
+          <span css={menuCategory} id="3">
+            가성비좋은곳
+          </span>
+
+          <div css={cardStyle}>
+            {storeData.가성비좋은곳.map((store) => (
+              <MainCard
+                key={store.name}
+                name={store.name}
+                summary={store.summary}
+                img={store.img}
+              />
+            ))}
+          </div>
+          <span css={menuCategory} id="4">
+            해장하기좋은곳
+          </span>
+
+          <div css={cardStyle}>
+            {storeData.해장하기좋은곳.map((store) => (
+              <MainCard
+                key={store.name}
+                name={store.name}
+                summary={store.summary}
+                img={store.img}
+              />
+            ))}
+          </div>
+        </div>
       </div>
+      <Footer />
     </>
   );
 }
@@ -67,10 +115,35 @@ const Title = (theme: Theme) => css`
 `;
 
 const menuCategory = (theme: Theme) => css`
+  margin-top: 50px;
   font-weight: ${theme.fontWeight.bold};
   font-size: 1.56rem;
 `;
 
+const layoutTool = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 40px;
+`;
+
 const layoutStyle = css`
-  padding: 30px 23px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0 0;
+  width: 1140px;
+  height: 100%;
+
+  max-width: 1200px;
+`;
+
+const cardStyle = css`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 280px);
+  gap: 5px;
+  align-items: stretch;
+  justify-items: stretch;
+  margin: 30px 0px;
 `;
