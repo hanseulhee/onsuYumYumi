@@ -33,7 +33,9 @@ function Detail() {
           <nav css={nav}>
             <ul>
               <li css={li}>Restaurant</li>
-              <li css={li}>FAQ</li>
+              <Link to="/faq">
+                <li css={li}>FAQ</li>
+              </Link>
               <Link to="/">
                 <li css={li}>Home</li>
               </Link>
@@ -132,8 +134,6 @@ const nav = (theme: Theme) => css`
     border-left: 0px solid #ccc;
   }
 `;
-
-
 
 const li = css`
   margin-right: 30px;
