@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { objectedStores, IStore } from "assets/stores";
-import img from "assets/images/nang.jpg";
 
 function Detail() {
   const { name } = useParams();
@@ -27,7 +26,7 @@ function Detail() {
     <>
       <div css={totalTool}>
         <div css={ImgTool}>
-          <img src={img} css={Img} alt="restaurant" />
+          <img src={currentStore?.img} css={Img} alt="restaurant" />
         </div>
 
         <div css={Tool}>
@@ -45,26 +44,28 @@ function Detail() {
             <div css={summary}>
               <div css={content}>
                 <h1 css={title}>{currentStore?.name}</h1>
-                <h2 css={smallTitle}>식당 소개</h2>
+                <h2 css={smallTitle}>{currentStore?.summary}</h2>
 
                 <div css={informTool}>
                   <h2 css={informTitle}>위치</h2>
-                  <span css={inform}>뭐라뭐라</span>
+                  <span css={inform}>{currentStore?.location}</span>
                 </div>
 
                 <div css={informTool}>
                   <h2 css={informTitle}>전화번호</h2>
-                  <span css={inform}>뭐라뭐라</span>
+                  <span css={inform}>{currentStore?.phone}</span>
                 </div>
                 <div css={informTool}>
                   <h2 css={informTitle}>영업시간</h2>
-                  <span css={inform}>뭐라뭐라</span>
+                  <span css={inform}>{currentStore?.time}</span>
                 </div>
 
                 <div css={menuTool}>
                   <h2>Menu</h2>
                   <div css={informTool}>
-                    <li css={inform}>메뉴</li>
+                    <div>
+                      <span css={inform}>{currentStore?.menu}</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -105,7 +106,7 @@ const ImgTool = (theme: Theme) => css`
 const Img = css`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 `;
 
 const Tool = (theme: Theme) => css`
@@ -131,6 +132,8 @@ const nav = (theme: Theme) => css`
     border-left: 0px solid #ccc;
   }
 `;
+
+
 
 const li = css`
   margin-right: 30px;
