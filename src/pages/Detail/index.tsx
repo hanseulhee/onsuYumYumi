@@ -48,26 +48,16 @@ function Detail() {
                 <h1 css={title}>{currentStore?.name}</h1>
                 <h2 css={smallTitle}>{currentStore?.summary}</h2>
 
-                <div css={informTool}>
-                  <h2 css={informTitle}>위치</h2>
-                  <span css={inform}>{currentStore?.location}</span>
-                </div>
-
-                <div css={informTool}>
-                  <h2 css={informTitle}>전화번호</h2>
-                  <span css={inform}>{currentStore?.phone}</span>
-                </div>
-                <div css={informTool}>
-                  <h2 css={informTitle}>영업시간</h2>
-                  <span css={inform}>{currentStore?.time}</span>
-                </div>
+                <ItemWrapper category="위치" value={currentStore?.location} />
+                <ItemWrapper category="전화번호" value={currentStore?.phone} />
+                <ItemWrapper category="영업시간" value={currentStore?.time} />
 
                 <div css={menuTool}>
                   <h2>Menu</h2>
                   <div css={informTool}>
-                    <div>
-                      <span css={inform}>{currentStore?.menu}</span>
-                    </div>
+                    {currentStore?.menu.map((eachMenu) => (
+                      <span css={menuSpan}>{eachMenu}</span>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -80,6 +70,20 @@ function Detail() {
 }
 
 export default Detail;
+
+interface Props {
+  category: string;
+  value: string | undefined;
+}
+
+function ItemWrapper({ category, value }: Props) {
+  return (
+    <div css={informTool}>
+      <h2 css={informTitle}>{category}</h2>
+      <span css={inform}>{value}</span>
+    </div>
+  );
+}
 
 const totalTool = (theme: Theme) => css`
   top: 0;
@@ -182,4 +186,8 @@ const inform = (theme: Theme) => css``;
 
 const menuTool = css`
   margin-top: 30px;
+`;
+
+const menuSpan = css`
+  margin-right: 0.75rem;
 `;
