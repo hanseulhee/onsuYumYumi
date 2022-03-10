@@ -1,29 +1,41 @@
 /** @jsxImportSource @emotion/react */
+
 import { css, Theme } from "@emotion/react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import img from "assets/images/nang.jpg";
+import { objectedStores, IStore } from "assets/stores";
 
 function Detail() {
-  // const { id } = useParams();
-  // const [storeDetail, setStoreDetail] = useState([]);
+  const { name } = useParams();
+  const [currentStore, setCurrentStore] = useState<IStore | null>(null);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (typeof name !== "string") {
+      navigate("/");
+      return;
+    }
+    if (!objectedStores[name]) {
+      navigate("/");
+      return;
+    }
+    setCurrentStore(objectedStores[name]);
+  }, []);
 
-  // useEffect(() => {
-  //   storeDetail();
-  // }, []);
   return (
     <>
       <div css={totalTool}>
         <div css={ImgTool}>
-          <img src={img} css={Img} alt="restaurant" />
+          <img src={currentStore?.img} css={Img} alt="restaurant" />
         </div>
 
         <div css={Tool}>
           <nav css={nav}>
             <ul>
               <li css={li}>Restaurant</li>
-              <li css={li}>FAQ</li>
+              <Link to="/faq">
+                <li css={li}>FAQ</li>
+              </Link>
               <Link to="/">
                 <li css={li}>Home</li>
               </Link>
@@ -33,27 +45,19 @@ function Detail() {
           <div css={summaryTool}>
             <div css={summary}>
               <div css={content}>
-                <h1 css={title}>식당 이름</h1>
-                <h2 css={smallTitle}>식당 소개</h2>
+                <h1 css={title}>{currentStore?.name}</h1>
+                <h2 css={smallTitle}>{currentStore?.summary}</h2>
 
-                <div css={informTool}>
-                  <h2 css={informTitle}>위치</h2>
-                  <span css={inform}>뭐라뭐라</span>
-                </div>
-
-                <div css={informTool}>
-                  <h2 css={informTitle}>전화번호</h2>
-                  <span css={inform}>뭐라뭐라</span>
-                </div>
-                <div css={informTool}>
-                  <h2 css={informTitle}>영업시간</h2>
-                  <span css={inform}>뭐라뭐라</span>
-                </div>
+                <ItemWrapper category="위치" value={currentStore?.location} />
+                <ItemWrapper category="전화번호" value={currentStore?.phone} />
+                <ItemWrapper category="영업시간" value={currentStore?.time} />
 
                 <div css={menuTool}>
                   <h2>Menu</h2>
                   <div css={informTool}>
-                    <li css={inform}>메뉴</li>
+                    {currentStore?.menu.map((eachMenu) => (
+                      <span css={menuSpan}>{eachMenu}</span>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -67,46 +71,85 @@ function Detail() {
 
 export default Detail;
 
-const totalTool = css`
+interface Props {
+  category: string;
+  value: string | undefined;
+}
+
+function ItemWrapper({ category, value }: Props) {
+  return (
+    <div css={informTool}>
+      <h2 css={informTitle}>{category}</h2>
+      <span css={inform}>{value}</span>
+    </div>
+  );
+}
+
+const totalTool = (theme: Theme) => css`
   top: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  ${theme.mediaQuery.mobile} {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 `;
 
-const ImgTool = css`
-  position: relative;
+const ImgTool = (theme: Theme) => css`
+  position: absolute;
+  height: 100vh;
   width: 50%;
-  margin: 0;
   padding: 0 62px 0 0;
+  ${theme.mediaQuery.mobile} {
+    height: 50%;
+    width: 100%;
+    padding: 0px;
+  }
 `;
 
 const Img = css`
-  position: absolute;
   width: 100%;
+  height: 100%;
+  object-fit: fill;
 `;
 
-const Tool = css`
+const Tool = (theme: Theme) => css`
   float: right;
   width: 50%;
-  padding: 0 0 0 66px;
+  padding: 0 0 0 55px;
   overflow-y: hidden;
   height: 100vh;
+  ${theme.mediaQuery.mobile} {
+    width: 100%;
+    padding: 10px;
+  }
 `;
 
-const nav = css`
+const nav = (theme: Theme) => css`
   border-left: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   padding: 25px 30px 22px;
+
+  ${theme.mediaQuery.mobile} {
+    width: 100%;
+    padding: 0px;
+    border-left: 0px solid #ccc;
+  }
 `;
 
 const li = css`
   margin-right: 30px;
 `;
 
-const summaryTool = css`
+const summaryTool = (theme: Theme) => css`
   border-left: 1px solid #ccc;
   height: 100%;
+  ${theme.mediaQuery.mobile} {
+    position: relative;
+    border-left: 0px solid #ccc;
+  }
 `;
 
 const summary = css`
@@ -143,4 +186,8 @@ const inform = (theme: Theme) => css``;
 
 const menuTool = css`
   margin-top: 30px;
+`;
+
+const menuSpan = css`
+  margin-right: 0.75rem;
 `;
