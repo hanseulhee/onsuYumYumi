@@ -1,10 +1,16 @@
 /** @jsxImportSource @emotion/react */
 
 import { css, Theme } from "@emotion/react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import faq from "assets/images/faq.jpg";
 
 function Faq() {
+  const navigate = useNavigate();
+
+  function onClickRestaurant() {
+    navigate(-1);
+  }
+
   return (
     <div css={totalTool}>
       <div css={ImgTool}>
@@ -14,7 +20,9 @@ function Faq() {
       <div css={Tool}>
         <nav css={nav}>
           <ul>
-            <li css={li}>Restaurant</li>
+            <li css={li} onClick={onClickRestaurant}>
+              Restaurant
+            </li>
             <Link to="/faq">
               <li css={li}>FAQ</li>
             </Link>
