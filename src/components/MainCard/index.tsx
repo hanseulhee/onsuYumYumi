@@ -17,7 +17,9 @@ function MainCard({ name, summary, img }: Props) {
         <div css={CardContent}>
           <span css={CardTitle}>{name}</span>
           <span css={CardSummary}>{summary}</span>
-          <img src={img} alt="restaurant" css={CardImg} />
+          <div css={ImgContainer}>
+            <img src={img} alt="restaurant" css={CardImg} />
+          </div>
         </div>
       </div>
     </Link>
@@ -40,7 +42,7 @@ const CardTool = (theme: Theme) => css`
   cursor: pointer;
 
   ${theme.mediaQuery.mobile} {
-    height: 220px;
+    height: 200px;
   }
 `;
 
@@ -52,8 +54,14 @@ const CardContent = (theme: Theme) => css`
   height: 350px;
   ${theme.mediaQuery.mobile} {
     height: 230px;
+    padding: 25px 0px;
   }
 `;
+
+const ImgContainer= (theme: Theme) => css`
+  display: flex;
+  justify-content: center;
+`
 
 const CardImg = (theme: Theme) => css`
   width: 230px;
@@ -62,8 +70,8 @@ const CardImg = (theme: Theme) => css`
   box-shadow: rgba(0, 0, 0, 0.16) 1px 1px 5px;
   margin-top: 10px;
   ${theme.mediaQuery.mobile} {
-    width: 145px;
-    height: 140px;
+    width: 135px;
+    height: 130px;
   }
 `;
 
@@ -72,7 +80,7 @@ const CardTitle = (theme: Theme) => css`
   font-size: 1.24rem;
 
   ${theme.mediaQuery.mobile} {
-    font-size: 1.11rem;
+    font-size: 0.89rem;
   }
 `;
 
@@ -81,6 +89,7 @@ const CardSummary = (theme: Theme) => css`
   font-size: 0.92rem;
   color: #8b95a1;
   ${theme.mediaQuery.mobile} {
-    font-size: 0.72rem;
+    font-size: 0.5rem;
+    color: #85898f;
   }
 `;

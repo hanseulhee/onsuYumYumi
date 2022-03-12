@@ -35,7 +35,7 @@ export default ServeNav;
 const nav = (theme: Theme) => css`
   border-left: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  padding: 25px 30px 22px;
+  padding: 20px 30px 20px;
 `;
 
 const button = (theme: Theme) => css`

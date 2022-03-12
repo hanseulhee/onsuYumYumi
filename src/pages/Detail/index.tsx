@@ -88,7 +88,6 @@ const Img = (theme: Theme) => css`
   ${theme.mediaQuery.mobile} {
     height: 50vh;
     width: 100vw;
-    border-radius: 3px;
   }
 `;
 
@@ -130,7 +129,7 @@ const smallTitle = (theme: Theme) => css`
   height: 30px;
   border-bottom: 1px solid #d2d2d2;
   ${theme.mediaQuery.mobile} {
-    font-size: 0.65rem;
+    font-size: 0.72rem;
   }
 `;
 
@@ -139,7 +138,7 @@ const menuTool = (theme: Theme) => css`
   max-height: 100%;
   margin-top: 30px;
   ${theme.mediaQuery.mobile} {
-    min-height: 100%;
+    min-height: 100vh;
   }
 `;
 

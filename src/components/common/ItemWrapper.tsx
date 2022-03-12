@@ -24,11 +24,11 @@ const informWrapper = css`
 
 const informTitle = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.bold};
-  font-size: 0.875rem;
+  font-size: 0.88rem;
 `;
 
 const inform = (theme: Theme) => css`
   ${theme.mediaQuery.mobile} {
-    font-size: 0.8rem;
+    font-size: 0.86rem;
   }
 `;

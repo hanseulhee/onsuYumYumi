@@ -66,7 +66,7 @@ const button = (theme: Theme) => css`
       0 1px 2px -1px rgba(0, 0, 0, 0.03);
   }
   ${theme.mediaQuery.mobile} {
-    font-size: 0.85rem;
-    padding: 0px 4px;
+    font-size: 0.7rem;
+    padding: 0px;
   }
 `;

@@ -149,6 +149,7 @@ const cardStyle = css`
   justify-items: stretch;
   margin: 30px 0px;
   ${theme.mediaQuery.mobile} {
-    grid-template-columns: repeat(auto-fill, 180px);
+    grid-template-columns: repeat(auto-fill, 154px);
+    gap: 7px 0px;
   }
 `;
