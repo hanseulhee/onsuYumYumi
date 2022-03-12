@@ -61,13 +61,11 @@ function Detail() {
 
 export default Detail;
 
-const totalWrapper = (theme: Theme) => css`
+const totalWrapper = css`
   top: 0;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  ${theme.mediaQuery.mobile} {
-  }
 `;
 
 const ImgWrapper = (theme: Theme) => css`
@@ -107,12 +105,12 @@ const Container = (theme: Theme) => css`
   }
 `;
 
-const summaryTool = (theme: Theme) => css`
+const summaryTool = css`
   border-left: 1px solid #ccc;
   height: 100%;
 `;
 
-const summary = (theme: Theme) => css`
+const summary = css`
   overflow-y: scroll;
   width: 100%;
   height: 100%;
