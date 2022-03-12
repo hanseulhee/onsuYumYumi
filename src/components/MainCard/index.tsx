@@ -58,10 +58,10 @@ const CardContent = (theme: Theme) => css`
   }
 `;
 
-const ImgContainer= (theme: Theme) => css`
+const ImgContainer = (theme: Theme) => css`
   display: flex;
   justify-content: center;
-`
+`;
 
 const CardImg = (theme: Theme) => css`
   width: 230px;
@@ -80,7 +80,7 @@ const CardTitle = (theme: Theme) => css`
   font-size: 1.24rem;
 
   ${theme.mediaQuery.mobile} {
-    font-size: 0.89rem;
+    font-size: 0.93rem;
   }
 `;
 
@@ -89,7 +89,7 @@ const CardSummary = (theme: Theme) => css`
   font-size: 0.92rem;
   color: #8b95a1;
   ${theme.mediaQuery.mobile} {
-    font-size: 0.5rem;
-    color: #85898f;
+    font-size: 0.65rem;
+    color: #65676b;
   }
 `;

@@ -10,7 +10,7 @@ function Nav() {
         <h1 css={logoStyle}>온수냠냐미</h1>
       </Link>
 
-      <div>
+      <div css={buttonContainer}>
         <a href="#혼밥" css={button}>
           혼밥
         </a>
@@ -50,8 +50,14 @@ const logoStyle = (theme: Theme) => css`
   color: ${theme.color.yellow};
 
   ${theme.mediaQuery.mobile} {
-    font-size: 1.25rem;
+    font-size: 1.27rem;
   }
+`;
+
+const buttonContainer = css`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 `;
 
 const button = (theme: Theme) => css`
@@ -66,7 +72,7 @@ const button = (theme: Theme) => css`
       0 1px 2px -1px rgba(0, 0, 0, 0.03);
   }
   ${theme.mediaQuery.mobile} {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     padding: 0px;
   }
 `;

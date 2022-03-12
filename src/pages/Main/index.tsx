@@ -114,6 +114,9 @@ const Title = (theme: Theme) => css`
 const menuCategory = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.bold};
   font-size: 1.56rem;
+  ${theme.mediaQuery.mobile} {
+    font-size: 1.5rem;
+  }
 `;
 
 const layoutTool = css`
@@ -149,7 +152,7 @@ const cardStyle = css`
   justify-items: stretch;
   margin: 30px 0px;
   ${theme.mediaQuery.mobile} {
-    grid-template-columns: repeat(auto-fill, 154px);
-    gap: 7px 0px;
+    grid-template-columns: repeat(auto-fill, 155px);
+    gap: 7px 3px;
   }
 `;

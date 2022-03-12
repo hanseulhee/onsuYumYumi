@@ -22,6 +22,6 @@ const tag = (theme: Theme) => css`
 
   margin: 50px 0px;
   ${theme.mediaQuery.mobile} {
-    margin: 40px 0px;
+    margin: 35px 0px;
   }
 `;

@@ -38,6 +38,7 @@ function Faq() {
                   온수냠냐미의 성장을 위해 맛집을 알고 계신다면 제보해주시면
                   감사하겠습니다. 🤗💪🏻
                   <br />
+                  <br />
                   온수역의 맛집 제보 혹은 문의는 onsuyumyumi@gmail.com으로
                   부탁드립니다.
                   <br />
@@ -136,7 +137,7 @@ const content = (theme: Theme) => css`
   padding: 15px 90px 0px 30px;
   height: 100%;
   ${theme.mediaQuery.mobile} {
-    padding: 15px 60px 0px 30px;
+    padding: 15px 30px 0px 30px;
     height: 100vh;
   }
 `;

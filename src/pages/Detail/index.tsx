@@ -120,7 +120,7 @@ const title = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.bold};
   font-size: 2.125rem;
   ${theme.mediaQuery.mobile} {
-    font-size: 1.8rem;
+    font-size: 1.73rem;
   }
 `;
 const smallTitle = (theme: Theme) => css`
@@ -129,7 +129,7 @@ const smallTitle = (theme: Theme) => css`
   height: 30px;
   border-bottom: 1px solid #d2d2d2;
   ${theme.mediaQuery.mobile} {
-    font-size: 0.72rem;
+    font-size: 0.69rem;
   }
 `;
 
@@ -138,7 +138,7 @@ const menuTool = (theme: Theme) => css`
   max-height: 100%;
   margin-top: 30px;
   ${theme.mediaQuery.mobile} {
-    min-height: 100vh;
+    min-height: 65vh;
   }
 `;
 
