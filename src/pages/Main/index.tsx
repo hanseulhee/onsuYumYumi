@@ -8,6 +8,7 @@ import Background from "pages/Main/Background";
 import MainCard from "components/MainCard";
 import storeData from "assets/stores";
 import Footer from "components/Footer";
+import TagLink from "components/common/TagLink";
 
 function Main() {
   return (
@@ -22,7 +23,8 @@ function Main() {
 
       <div css={layoutTool}>
         <div css={layoutStyle}>
-          <span css={menuCategory} id="혼밥">
+          <TagLink category="혼밥" />
+          <span css={menuCategory}>
             혼밥하기좋은곳
           </span>
 
@@ -37,7 +39,8 @@ function Main() {
             ))}
           </div>
 
-          <span css={menuCategory} id="회식">
+          <TagLink category="회식" />
+          <span css={menuCategory}>
             회식하기좋은곳
           </span>
 
@@ -51,7 +54,8 @@ function Main() {
               />
             ))}
           </div>
-          <span css={menuCategory} id="가성비">
+          <TagLink category="가성비" />
+          <span css={menuCategory}>
             가성비좋은곳
           </span>
 
@@ -65,7 +69,8 @@ function Main() {
               />
             ))}
           </div>
-          <span css={menuCategory} id="해장">
+          <TagLink category="해장" />
+          <span css={menuCategory}>
             해장하기좋은곳
           </span>
 
@@ -115,9 +120,9 @@ const Title = (theme: Theme) => css`
 `;
 
 const menuCategory = (theme: Theme) => css`
-  margin-top: 50px;
   font-weight: ${theme.fontWeight.bold};
   font-size: 1.56rem;
+  
 `;
 
 const layoutTool = css`

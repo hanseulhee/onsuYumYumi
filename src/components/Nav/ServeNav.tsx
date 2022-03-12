@@ -5,9 +5,12 @@ import { Link } from "react-router-dom";
 import { useNavigate, useParams } from "react-router-dom";
 
 function ServeNav() {
-  //   const { name } = useParams();
+  const { name } = useParams();
   const navigate = useNavigate();
   function onClickRestaurant() {
+    if (name) {
+      navigate(`/detail/${name}`);
+    }
     navigate(-1);
   }
   return (
@@ -16,14 +19,6 @@ function ServeNav() {
         <li css={button} onClick={onClickRestaurant}>
           Restaurant
         </li>
-        {/* <li
-          css={button}
-          onClick={(name) =>
-            `/detail/${name}` ? onClickRestaurant : navigate(-1)
-          }
-        >
-          Restaurant
-        </li> */}
         <Link to="/faq">
           <li css={button}>FAQ</li>
         </Link>
