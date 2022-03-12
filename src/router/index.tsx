@@ -1,7 +1,7 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Detail from "pages/Detail";
 import Main from "pages/Main";
-import Faq from "components/Faq";
+import Faq from "pages/Faq";
 
 function Router() {
   return (

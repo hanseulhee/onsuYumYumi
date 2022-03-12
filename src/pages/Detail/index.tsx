@@ -1,15 +1,17 @@
 /** @jsxImportSource @emotion/react */
 
 import { css, Theme } from "@emotion/react";
-import { Link, useNavigate } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { objectedStores, IStore } from "assets/stores";
+import ItemWrapper from "components/common/ItemWrapper";
+import ServeNav from "components/Nav/ServeNav";
 
 function Detail() {
   const { name } = useParams();
   const [currentStore, setCurrentStore] = useState<IStore | null>(null);
   const navigate = useNavigate();
+
   useEffect(() => {
     if (typeof name !== "string") {
       navigate("/");
@@ -20,7 +22,7 @@ function Detail() {
       return;
     }
     setCurrentStore(objectedStores[name]);
-  }, []);
+  }, [name, navigate]);
 
   return (
     <>
@@ -30,35 +32,23 @@ function Detail() {
         </div>
 
         <div css={Tool}>
-          <nav css={nav}>
-            <ul>
-              <li css={li}>Restaurant</li>
-              <Link to="/faq">
-                <li css={li}>FAQ</li>
-              </Link>
-              <Link to="/">
-                <li css={li}>Home</li>
-              </Link>
-            </ul>
-          </nav>
-
+          <ServeNav />
           <div css={summaryTool}>
             <div css={summary}>
-              <div css={content}>
-                <h1 css={title}>{currentStore?.name}</h1>
-                <h2 css={smallTitle}>{currentStore?.summary}</h2>
+              <h1 css={title}>{currentStore?.name}</h1>
+              <h2 css={smallTitle}>{currentStore?.summary}</h2>
 
-                <ItemWrapper category="위치" value={currentStore?.location} />
-                <ItemWrapper category="전화번호" value={currentStore?.phone} />
-                <ItemWrapper category="영업시간" value={currentStore?.time} />
-
-                <div css={menuTool}>
-                  <h2>Menu</h2>
-                  <div css={informTool}>
+              <ItemWrapper category="위치" value={currentStore?.location} />
+              <ItemWrapper category="전화번호" value={currentStore?.phone} />
+              <ItemWrapper category="영업시간" value={currentStore?.time} />
+              <div css={menuTool}>
+                <h2>Menu</h2>
+                <div css={menuWrapper}>
+                  <ul>
                     {currentStore?.menu.map((eachMenu) => (
-                      <span css={menuSpan}>{eachMenu}</span>
+                      <li css={menuList}>{eachMenu}</li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -70,20 +60,6 @@ function Detail() {
 }
 
 export default Detail;
-
-interface Props {
-  category: string;
-  value: string | undefined;
-}
-
-function ItemWrapper({ category, value }: Props) {
-  return (
-    <div css={informTool}>
-      <h2 css={informTitle}>{category}</h2>
-      <span css={inform}>{value}</span>
-    </div>
-  );
-}
 
 const totalTool = (theme: Theme) => css`
   top: 0;
@@ -127,22 +103,6 @@ const Tool = (theme: Theme) => css`
   }
 `;
 
-const nav = (theme: Theme) => css`
-  border-left: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  padding: 25px 30px 22px;
-
-  ${theme.mediaQuery.mobile} {
-    width: 100%;
-    padding: 0px;
-    border-left: 0px solid #ccc;
-  }
-`;
-
-const li = css`
-  margin-right: 30px;
-`;
-
 const summaryTool = (theme: Theme) => css`
   border-left: 1px solid #ccc;
   height: 100%;
@@ -157,6 +117,7 @@ const summary = css`
   overflow-y: scroll;
   width: 100%;
   height: 100%;
+  padding: 15px 90px 0px 30px;
 `;
 
 const title = (theme: Theme) => css`
@@ -170,24 +131,17 @@ const smallTitle = (theme: Theme) => css`
   border-bottom: 1px solid #d2d2d2;
 `;
 
-const content = css`
-  padding: 15px 90px 0px 30px;
-`;
-
-const informTool = css`
-  padding-top: 25px;
-`;
-
-const informTitle = (theme: Theme) => css`
-  font-weight: ${theme.fontWeight.bold};
-  font-size: 0.875rem;
-`;
-const inform = (theme: Theme) => css``;
-
 const menuTool = css`
+  min-height: 68%;
+  max-height: 100%;
   margin-top: 30px;
 `;
 
-const menuSpan = css`
-  margin-right: 0.75rem;
+const menuWrapper = css`
+  max-width: 90%;
+`;
+const menuList = css`
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
 `;

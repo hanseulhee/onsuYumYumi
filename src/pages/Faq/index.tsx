@@ -1,16 +1,10 @@
 /** @jsxImportSource @emotion/react */
 
 import { css, Theme } from "@emotion/react";
-import { Link, useNavigate } from "react-router-dom";
 import faq from "assets/images/faq.jpg";
+import ServeNav from "components/Nav/ServeNav";
 
 function Faq() {
-  const navigate = useNavigate();
-
-  function onClickRestaurant() {
-    navigate(-1);
-  }
-
   return (
     <div css={totalTool}>
       <div css={ImgTool}>
@@ -18,19 +12,7 @@ function Faq() {
       </div>
 
       <div css={Tool}>
-        <nav css={nav}>
-          <ul>
-            <li css={li} onClick={onClickRestaurant}>
-              Restaurant
-            </li>
-            <Link to="/faq">
-              <li css={li}>FAQ</li>
-            </Link>
-            <Link to="/">
-              <li css={li}>Home</li>
-            </Link>
-          </ul>
-        </nav>
+        <ServeNav />
 
         <div css={summaryTool}>
           <div css={summary}>
@@ -105,16 +87,6 @@ const Tool = css`
   padding: 0 0 0 55px;
   overflow-y: hidden;
   height: 100vh;
-`;
-
-const nav = css`
-  border-left: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  padding: 25px 30px 22px;
-`;
-
-const li = css`
-  margin-right: 30px;
 `;
 
 const summaryTool = css`
