@@ -56,7 +56,7 @@ const logoStyle = (theme: Theme) => css`
 
 const button = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.normal};
-  padding: 7px 15px;
+  padding: 0px 15px;
   margin-right: 0.8rem;
   font-size: 0.94rem;
 
@@ -64,5 +64,9 @@ const button = (theme: Theme) => css`
     background-color: #f3f3f3;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06),
       0 1px 2px -1px rgba(0, 0, 0, 0.03);
+  }
+  ${theme.mediaQuery.mobile} {
+    font-size: 0.85rem;
+    padding: 0px 4px;
   }
 `;
