@@ -26,12 +26,12 @@ function Detail() {
 
   return (
     <>
-      <div css={totalTool}>
-        <div css={ImgTool}>
+      <div css={totalWrapper}>
+        <div css={ImgWrapper}>
           <img src={currentStore?.img} css={Img} alt="restaurant" />
         </div>
 
-        <div css={Tool}>
+        <div css={Container}>
           <ServeNav />
           <div css={summaryTool}>
             <div css={summary}>
@@ -61,59 +61,58 @@ function Detail() {
 
 export default Detail;
 
-const totalTool = (theme: Theme) => css`
+const totalWrapper = (theme: Theme) => css`
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   ${theme.mediaQuery.mobile} {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
   }
 `;
 
-const ImgTool = (theme: Theme) => css`
+const ImgWrapper = (theme: Theme) => css`
   position: absolute;
-  height: 100vh;
+  height: 100%;
   width: 50%;
   padding: 0 62px 0 0;
   ${theme.mediaQuery.mobile} {
-    height: 50%;
-    width: 100%;
-    padding: 0px;
+    position: relative;
+    top: 0;
+    height: 50vh;
+    width: 100vw;
   }
 `;
 
-const Img = css`
+const Img = (theme: Theme) => css`
   width: 100%;
   height: 100%;
   object-fit: fill;
+  ${theme.mediaQuery.mobile} {
+    height: 50vh;
+    width: 100vw;
+    border-radius: 3px;
+  }
 `;
 
-const Tool = (theme: Theme) => css`
+const Container = (theme: Theme) => css`
   float: right;
   width: 50%;
   padding: 0 0 0 55px;
   overflow-y: hidden;
   height: 100vh;
   ${theme.mediaQuery.mobile} {
-    width: 100%;
-    padding: 10px;
+    height: 50vh;
+    width: 100vw;
+    padding: 0px;
   }
 `;
 
 const summaryTool = (theme: Theme) => css`
   border-left: 1px solid #ccc;
   height: 100%;
-  ${theme.mediaQuery.mobile} {
-    position: relative;
-    border-left: 0px solid #ccc;
-  }
 `;
 
-const summary = css`
-  border-bottom: 1px solid #ccc;
+const summary = (theme: Theme) => css`
   overflow-y: scroll;
   width: 100%;
   height: 100%;
@@ -123,25 +122,39 @@ const summary = css`
 const title = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.bold};
   font-size: 2.125rem;
+  ${theme.mediaQuery.mobile} {
+    font-size: 1.8rem;
+  }
 `;
 const smallTitle = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.normal};
   font-size: 0.875rem;
   height: 30px;
   border-bottom: 1px solid #d2d2d2;
+  ${theme.mediaQuery.mobile} {
+    font-size: 0.65rem;
+  }
 `;
 
-const menuTool = css`
-  min-height: 68%;
+const menuTool = (theme: Theme) => css`
+  min-height: 70%;
   max-height: 100%;
   margin-top: 30px;
+  ${theme.mediaQuery.mobile} {
+    min-height: 100%;
+  }
 `;
 
 const menuWrapper = css`
+  border-top: 1px solid #ccc;
   max-width: 90%;
+  margin-top: 0.5rem;
 `;
-const menuList = css`
+const menuList = (theme: Theme) => css`
   display: flex;
   flex-direction: column;
   margin-top: 0.5rem;
+  ${theme.mediaQuery.mobile} {
+    font-size: 0.8rem;
+  }
 `;
