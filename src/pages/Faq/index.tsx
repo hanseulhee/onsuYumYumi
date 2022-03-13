@@ -1,14 +1,14 @@
 /** @jsxImportSource @emotion/react */
 
 import { css, Theme } from "@emotion/react";
-import faq from "assets/images/faq.jpg";
 import ServeNav from "components/Nav/ServeNav";
+import Hello from "pages/Faq/Hello";
 
 function Faq() {
   return (
     <div css={totalWrapper}>
       <div css={ImgWrapper}>
-        <img src={faq} css={Img} alt="restaurant" />
+        <Hello />
       </div>
 
       <div css={Container}>
@@ -79,17 +79,6 @@ const ImgWrapper = (theme: Theme) => css`
     top: 0;
     height: 50vh;
     width: 100vw;
-  }
-`;
-
-const Img = (theme: Theme) => css`
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-  ${theme.mediaQuery.mobile} {
-    height: 50vh;
-    width: 100vw;
-    border-radius: 3px;
   }
 `;
 

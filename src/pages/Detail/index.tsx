@@ -76,7 +76,7 @@ const ImgWrapper = (theme: Theme) => css`
   ${theme.mediaQuery.mobile} {
     position: relative;
     top: 0;
-    height: 50vh;
+    height: 45vh;
     width: 100vw;
   }
 `;
@@ -86,7 +86,7 @@ const Img = (theme: Theme) => css`
   height: 100%;
   object-fit: fill;
   ${theme.mediaQuery.mobile} {
-    height: 50vh;
+    height: 45vh;
     width: 100vw;
   }
 `;
@@ -98,7 +98,7 @@ const Container = (theme: Theme) => css`
   overflow-y: hidden;
   height: 100vh;
   ${theme.mediaQuery.mobile} {
-    height: 50vh;
+    height: 55vh;
     width: 100vw;
     padding: 0px;
   }
@@ -109,11 +109,14 @@ const summaryTool = css`
   height: 100%;
 `;
 
-const summary = css`
+const summary = (theme: Theme) => css`
   overflow-y: scroll;
   width: 100%;
   height: 100%;
   padding: 15px 90px 0px 30px;
+  ${theme.mediaQuery.mobile} {
+    padding: 15px 30px 0px 30px;
+  }
 `;
 
 const title = (theme: Theme) => css`
@@ -144,7 +147,7 @@ const menuTool = (theme: Theme) => css`
 
 const menuWrapper = css`
   border-top: 1px solid #ccc;
-  max-width: 90%;
+  max-width: 100%;
   margin-top: 0.5rem;
 `;
 const menuList = (theme: Theme) => css`

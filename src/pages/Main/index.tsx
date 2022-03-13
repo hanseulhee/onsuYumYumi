@@ -153,6 +153,6 @@ const cardStyle = css`
   margin: 30px 0px;
   ${theme.mediaQuery.mobile} {
     grid-template-columns: repeat(auto-fill, 155px);
-    gap: 7px 3px;
+    gap: 3px;
   }
 `;

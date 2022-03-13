@@ -90,6 +90,6 @@ const CardSummary = (theme: Theme) => css`
   color: #8b95a1;
   ${theme.mediaQuery.mobile} {
     font-size: 0.65rem;
-    color: #65676b;
+    color: rgb(73, 73, 73);
   }
 `;

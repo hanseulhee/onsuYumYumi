@@ -18,7 +18,7 @@ const stores: IStore[] = [
     name: "돈돈",
     summary: "착한 가격의 생삼겹살집",
     category: ["가성비좋은곳", "회식하기좋은곳"],
-    img: "https://user-images.githubusercontent.com/63100352/156108615-6587c307-5820-45db-ad76-78b7c9fd6d19.png",
+    img: "https://user-images.githubusercontent.com/63100352/158054201-e07c8000-0eb8-4bda-b5be-654cf0121c06.jpg",
     phone: "02-2616-5997",
     location: "서울 구로구 경인로3길 86 승일빌딩",
     time: "정보없음",
