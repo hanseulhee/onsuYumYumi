@@ -11,7 +11,7 @@ function ItemWrapper({ category, value }: Props) {
   return (
     <div css={informWrapper}>
       <h2 css={informTitle}>{category}</h2>
-      <span>{value}</span>
+      <span css={inform}>{value}</span>
     </div>
   );
 }
@@ -24,5 +24,11 @@ const informWrapper = css`
 
 const informTitle = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.bold};
-  font-size: 0.875rem;
+  font-size: 0.89rem;
+`;
+
+const inform = (theme: Theme) => css`
+  ${theme.mediaQuery.mobile} {
+    font-size: 0.87rem;
+  }
 `;

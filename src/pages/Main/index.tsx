@@ -24,9 +24,7 @@ function Main() {
       <div css={layoutTool}>
         <div css={layoutStyle}>
           <TagLink category="혼밥" />
-          <span css={menuCategory}>
-            혼밥하기좋은곳
-          </span>
+          <span css={menuCategory}>혼밥하기좋은곳</span>
 
           <div css={cardStyle}>
             {storeData.혼밥하기좋은곳.map((store) => (
@@ -40,9 +38,7 @@ function Main() {
           </div>
 
           <TagLink category="회식" />
-          <span css={menuCategory}>
-            회식하기좋은곳
-          </span>
+          <span css={menuCategory}>회식하기좋은곳</span>
 
           <div css={cardStyle}>
             {storeData.회식하기좋은곳.map((store) => (
@@ -55,9 +51,7 @@ function Main() {
             ))}
           </div>
           <TagLink category="가성비" />
-          <span css={menuCategory}>
-            가성비좋은곳
-          </span>
+          <span css={menuCategory}>가성비좋은곳</span>
 
           <div css={cardStyle}>
             {storeData.가성비좋은곳.map((store) => (
@@ -70,9 +64,7 @@ function Main() {
             ))}
           </div>
           <TagLink category="해장" />
-          <span css={menuCategory}>
-            해장하기좋은곳
-          </span>
+          <span css={menuCategory}>해장하기좋은곳</span>
 
           <div css={cardStyle}>
             {storeData.해장하기좋은곳.map((store) => (
@@ -122,7 +114,9 @@ const Title = (theme: Theme) => css`
 const menuCategory = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.bold};
   font-size: 1.56rem;
-  
+  ${theme.mediaQuery.mobile} {
+    font-size: 1.5rem;
+  }
 `;
 
 const layoutTool = css`
@@ -130,8 +124,11 @@ const layoutTool = css`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   margin-bottom: 40px;
+  ${theme.mediaQuery.mobile} {
+    padding: 0px 23px;
+    margin-top: 0px;
+  }
 `;
 
 const layoutStyle = css`
@@ -142,6 +139,9 @@ const layoutStyle = css`
   height: 100%;
 
   max-width: 1200px;
+  ${theme.mediaQuery.mobile} {
+    width: 100%;
+  }
 `;
 
 const cardStyle = css`
@@ -151,4 +151,8 @@ const cardStyle = css`
   align-items: stretch;
   justify-items: stretch;
   margin: 30px 0px;
+  ${theme.mediaQuery.mobile} {
+    grid-template-columns: repeat(auto-fill, 155px);
+    gap: 3px;
+  }
 `;

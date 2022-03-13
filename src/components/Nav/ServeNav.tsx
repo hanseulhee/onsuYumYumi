@@ -35,15 +35,12 @@ export default ServeNav;
 const nav = (theme: Theme) => css`
   border-left: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  padding: 25px 30px 22px;
-
-  ${theme.mediaQuery.mobile} {
-    width: 100%;
-    padding: 0px;
-    border-left: 0px solid #ccc;
-  }
+  padding: 20px 30px 20px;
 `;
 
-const button = css`
+const button = (theme: Theme) => css`
   margin-right: 30px;
+  ${theme.mediaQuery.mobile} {
+    font-size: 0.95rem;
+  }
 `;
