@@ -3,9 +3,9 @@
 import { css, Theme } from "@emotion/react";
 
 import LottieWrapper from "components/common/LottieWrapper";
-import bgLottieData from "assets/lottie/hello.json";
+import bgLottieData from "assets/lottie/character.json";
 
-function Hello() {
+function Character() {
   return (
     <div css={wrapper}>
       <LottieWrapper lottieData={bgLottieData} />
@@ -13,13 +13,13 @@ function Hello() {
   );
 }
 
-export default Hello;
+export default Character;
 
 const wrapper = (theme: Theme) => css`
   width: 100%;
   height: 100%;
   ${theme.mediaQuery.mobile} {
-    height: 60vh;
-    width: 104vw;
+    height: 45vh;
+    width: 100vw;
   }
 `;

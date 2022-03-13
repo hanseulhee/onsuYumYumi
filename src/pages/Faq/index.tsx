@@ -2,13 +2,13 @@
 
 import { css, Theme } from "@emotion/react";
 import ServeNav from "components/Nav/ServeNav";
-import Hello from "pages/Faq/Hello";
+import Character from "./Character";
 
 function Faq() {
   return (
     <div css={totalWrapper}>
       <div css={ImgWrapper}>
-        <Hello />
+        <Character />
       </div>
 
       <div css={Container}>
@@ -78,7 +78,7 @@ const ImgWrapper = (theme: Theme) => css`
     position: relative;
     top: 0;
     padding: 0px;
-    height: 60vh;
+    height: 45vh;
     width: 100vw;
   }
 `;
