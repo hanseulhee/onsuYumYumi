@@ -19,7 +19,7 @@ const wrapper = (theme: Theme) => css`
   width: 100%;
   height: 100%;
   ${theme.mediaQuery.mobile} {
-    height: 50vh;
-    width: 100vw;
+    height: 60vh;
+    width: 104vw;
   }
 `;

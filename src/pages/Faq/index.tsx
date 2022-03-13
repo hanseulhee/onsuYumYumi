@@ -77,7 +77,8 @@ const ImgWrapper = (theme: Theme) => css`
   ${theme.mediaQuery.mobile} {
     position: relative;
     top: 0;
-    height: 50vh;
+    padding: 0px;
+    height: 60vh;
     width: 100vw;
   }
 `;
