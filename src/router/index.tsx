@@ -2,8 +2,10 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Detail from "pages/Detail";
 import Main from "pages/Main";
 import Faq from "pages/Faq";
+import useGa from "hooks/useGa";
 
 function Router() {
+  useGa();
   return (
     <BrowserRouter>
       <Routes>
