@@ -24,6 +24,8 @@ const globalStyle = css`
     overflow-x: hidden;
     scroll-behavior: smooth;
     box-sizing: border-box;
+    background-color: white;
+    color: black;
   }
 
   button,
