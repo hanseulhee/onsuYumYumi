@@ -152,7 +152,7 @@ const cardStyle = css`
   justify-items: stretch;
   margin: 30px 0px;
   ${theme.mediaQuery.mobile} {
-    grid-template-columns: repeat(auto-fill, 155px);
-    gap: 3px;
+    grid-template-columns: repeat(auto-fill, 145px);
+    gap: 2px;
   }
 `;

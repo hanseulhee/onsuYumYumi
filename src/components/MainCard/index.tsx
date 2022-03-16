@@ -70,8 +70,11 @@ const CardImg = (theme: Theme) => css`
   box-shadow: rgba(0, 0, 0, 0.16) 1px 1px 5px;
   margin-top: 10px;
   ${theme.mediaQuery.mobile} {
-    width: 135px;
-    height: 130px;
+    width: 126px;
+    height: 121px;
+
+    max-width: 135px;
+    max-height: 130px;
   }
 `;
 

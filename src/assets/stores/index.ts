@@ -157,7 +157,7 @@ const stores: IStore[] = [
   },
   {
     name: "터프네이모",
-    summary: "추억 회상하며 한 잔하기 좋은 포차",
+    summary: "추억 회상하며 술먹기 좋은 포차",
     category: ["회식하기좋은곳"],
     img: "https://user-images.githubusercontent.com/63100352/156109078-5226556b-48a0-48b7-8897-36a64bfecadf.png",
     phone: "02-2688-3123",
@@ -199,7 +199,7 @@ const stores: IStore[] = [
   },
   {
     name: "꼼사모꼼장어숯불구이",
-    summary: "직화삼겹 쭈꾸미, 꼼장어 숯불구이",
+    summary: "꼼장어를 사랑하는 모임",
     category: ["가성비좋은곳", "회식하기좋은곳"],
     img: "https://user-images.githubusercontent.com/63100352/157050486-2728d877-a32e-413c-a84b-e86e1d1a7cd6.png",
     phone: "010-8964-7026",
@@ -259,7 +259,7 @@ const stores: IStore[] = [
   },
   {
     name: "냉삼집",
-    summary: "엔틱한 분위기의 냉동 삼겹살 맛집",
+    summary: "온수역 냉동 삼겹살 맛집",
     category: ["회식하기좋은곳"],
     img: "https://user-images.githubusercontent.com/63100352/156108733-46002def-bd1e-47b2-9e83-db9ed0fb43d2.png",
     phone: "0507-1314-8352",
@@ -276,7 +276,7 @@ const stores: IStore[] = [
   },
   {
     name: "뚜레쥬르",
-    summary: "간단한 한끼, 생일케잌 바로 여기서!",
+    summary: "생일케잌 바로 여기서!",
     category: ["가성비좋은곳", "혼밥하기좋은곳"],
     img: "https://user-images.githubusercontent.com/63100352/158023789-cbe67b9c-c067-468a-bded-9f4c899e4f84.jpg",
     phone: "02-2066-9966",
@@ -335,7 +335,7 @@ const stores: IStore[] = [
   },
   {
     name: "의정부부대찌개",
-    summary: "육수 맛이 일품인 부대찌개 전문점",
+    summary: "육수 맛이 일품, 찌개 맛집!",
     category: ["가성비좋은곳", "해장하기좋은곳", "회식하기좋은곳"],
     img: "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190115_174%2F1547540183545AQQRD_JPEG%2Fo6-lFX61nNqkNjA2aOgA-zlZ.jpeg.jpg",
     phone: "02-2618-3685",
@@ -355,7 +355,7 @@ const stores: IStore[] = [
   },
   {
     name: "고바우",
-    summary: "그때 그 시절에 먹던 덩어리 생고기",
+    summary: "그때 그 시절에 먹던 생고기",
     category: ["회식하기좋은곳", "가성비좋은곳"],
     img: "https://t1.daumcdn.net/cfile/tistory/227A183558CF06EB28",
     phone: "02-2611-5586",
@@ -405,7 +405,7 @@ const stores: IStore[] = [
   },
   {
     name: "우방정육식당",
-    summary: "이게 육회야 빙수야, 눈꽃 빙수 맛집",
+    summary: "이게 육회야 빙수야!",
     category: ["회식하기좋은곳", "가성비좋은곳"],
     img: "https://user-images.githubusercontent.com/63100352/156375410-51f07c9c-40cd-47b7-80a2-a093105811b0.png",
     phone: "02-2615-4651",
