@@ -47,8 +47,6 @@
 
 **OnsuYumYumi**는 현재 [위 URL](https://onsu-yum-yumi.vercel.app/)에서 서비스되고 있습니다.
 
-## Features
-
 ## Directory Structure
 
 ```bash
