@@ -19,7 +19,7 @@ function Footer() {
 
 export default Footer;
 
-const footerTool  = (theme: Theme) => css`
+const footerTool = (theme: Theme) => css`
   width: 100vw;
   height: 15vh;
 
@@ -40,7 +40,7 @@ const summary = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.bold};
   font-size: 1.063rem;
   margin-left: 3px;
-  color: ${theme.color.white}
+  color: ${theme.color.white};
 `;
 
 const madeby = (theme: Theme) => css`
