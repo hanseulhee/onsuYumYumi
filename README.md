@@ -10,7 +10,8 @@
 <div align="center">
   <a href="#introduction">Introduction</a> •
   <a href="#getting-started">Getting Started</a> •
-  <a href="#developer">Developer</a>
+  <a href="#developer">Developer</a> • 
+  <a href="#blog">Blog</a>
 </div>
 
 <br/><br/><br/><br/><br/>
@@ -81,6 +82,14 @@ src
 |                                          FE: [hanseulhee](https://github.com/hanseulhee)                                          |
 | :-------------------------------------------------------------------------------------------------------------------------------: |
 | <img src="https://user-images.githubusercontent.com/63100352/161780492-acd88249-7ecc-48f6-8a61-b513647d7dcd.jpg" width="70px"  /> |
+
+## Blog
+
+해당 프로젝트의 회고는 [다음](https://velog.io/@seulhyi/%EC%98%A8%EC%88%98%EB%83%A0%EB%83%90%EB%AF%B8-onsuyumyumi)에서 보실 수 있습니다.
+
+## Service
+
+현재는 [온수냠냠냠](https://www.onsuyum.com/)으로 업데이트되어 사용되고 있습니다.
 
 ## License
 
