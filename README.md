@@ -34,8 +34,6 @@
 
 **OnsuYumYumi**는 위 개발 스택을 사용하여 개발되었습니다.
 
-(2022년 4월 이후로 업데이트가 중단되었습니다.)
-
 ## Getting Started
 
 <div align="center">
@@ -49,6 +47,8 @@
 </div>
 
 **OnsuYumYumi**는 현재 [위 URL](https://onsu-yum-yumi.vercel.app/)에서 서비스되고 있습니다.
+
+(2022년 4월 이후로 업데이트가 중단되었습니다.)
 
 ## Directory Structure
 
