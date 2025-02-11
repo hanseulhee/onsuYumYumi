@@ -34,6 +34,8 @@
 
 **OnsuYumYumi**는 위 개발 스택을 사용하여 개발되었습니다.
 
+(2022년 4월 이후로 업데이트가 중단되었습니다.)
+
 ## Getting Started
 
 <div align="center">
